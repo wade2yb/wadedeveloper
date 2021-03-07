@@ -13,7 +13,7 @@ module.exports = {
     let channel = message.guild.channels.cache.find(x => x.name === "keluh-kesah" || x.name === "keluh-kesah");
 
     if (!channel) {
-      return message.channel.send("there is no channel with name - suggestions");
+      return message.channel.send("there is no channel with name - keluh-kesah");
     }
 
     let embed = new MessageEmbed()
