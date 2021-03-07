@@ -1,6 +1,6 @@
 ## MY FISRT MODERATION BOT MADE USING DISCORD.JS 
-## Made by tag:- cw Khan#6496
-Id- 682981714523586606
+## Made by tag:- Unio77#8580
+Id- 717824012184715336
 ## Categories 📑
 
 
