@@ -3,17 +3,17 @@ const ms = require('ms');
 module.exports = {
   name: "reroll",
   description:
-    "Get list of all command and even get to know every command detials",
+    "Dapatkan daftar semua perintah dan bahkan kenali setiap detail perintah",
   usage: "help <cmd>",
   category:"giveaway",
     run: async (bot, message, args) => {
        if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
-        return message.channel.send(':x: You need to have the manage messages permissions to reroll giveaways.');
+        return message.channel.send(':x: Anda harus memiliki izin kelola pesan untuk mengumpulkan ulang hadiah.');
     }
 
     // If no message ID or giveaway name is specified
     if(!args[0]){
-        return message.channel.send(':x: You have to specify a valid message ID!');
+        return message.channel.send(':x: Anda harus menentukan ID pesan yang valid!');
     }
 
     // try to found the giveaway with prize then with ID
@@ -25,7 +25,7 @@ module.exports = {
 
     // If no giveaway was found
     if(!giveaway){
-        return message.channel.send('Unable to find a giveaway for `'+ args.join(' ') +'`.');
+        return message.channel.send('Tidak dapat menemukan hadiah untuk `'+ args.join(' ') +'`.');
     }
 
     // Reroll the giveaway
@@ -35,11 +35,11 @@ module.exports = {
         message.channel.send('Giveaway rerolled!');
     })
     .catch((e) => {
-        if(e.startsWith(`Giveaway with message ID ${giveaway.messageID} is not ended.`)){
-            message.channel.send('This giveaway is not ended!');
+        if(e.startsWith(`Giveaway dengan ID pesan${giveaway.messageID} tidak berakhir.`)){
+            message.channel.send('Hadiah ini belum berakhir!');
         } else {
             console.error(e);
-            message.channel.send('An error occured...');
+            message.channel.send('Kesalahan terjadi...');
         }
     });
 
