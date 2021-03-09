@@ -7,7 +7,7 @@ module.exports = {
 }
    run: async(client, message, args) => {
    if (!message.member.hasPermission('MANAGE_SERVER', 'MANAGE_CHANNELS')) {
-   return message.channel.send("You don't have enough Permissions")
+   return message.channel.send("Anda tidak memiliki cukup Izin")
    }
    message.channel.overwritePermissions([
      {
@@ -17,7 +17,7 @@ module.exports = {
     ],);
    const embed = new Discord.MessageEmbed()
    .setTitle("Channel Updates")
-   .setDescription(`ðŸ”’ ${message.channel} has been Locked`)
+   .setDescription(`ðŸ”’ ${message.channel} telah Dikunci!`)
    .setColor("RANDOM");
    await message.channel.send(embed);
    message.delete();
