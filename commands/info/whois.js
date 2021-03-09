@@ -5,7 +5,7 @@ module.exports = {
   name: "userinfo",
   aliases: ["whois", "user"],
   usage: "userinfo <MENTION>",
-  description: "Get advance stats of given person or yourself",
+  description: "Dapatkan statistik lanjutan dari orang tertentu atau diri Anda sendiri",
   run: async (client, message, args) => {
 
 
@@ -23,7 +23,7 @@ module.exports = {
     }
 
     if (!user) {
-      return message.channel.send(":x: Unable to find this person!")
+      return message.channel.send(":x: Tidak dapat menemukan orang ini!")
     }
 
 
