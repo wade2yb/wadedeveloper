@@ -6,13 +6,14 @@ module.exports = {
   run: async (client, message, args) => {
     
     if(!args[0]) {
-      return message.channel.send("Please give the Room ID")
+      return message.channel.send("Tolong berikan ID ROOM")
+                                
     }
     
     let pass = args.slice(1).join(" ")
     
     if(!pass) {
-      return message.channel.send("Please give the Room Password");
+      return message.channel.send("Tolong berikan Kata Sandi ROOM");
     }
 
   let embed = new discord.MessageEmbed()
