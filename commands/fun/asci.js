@@ -6,16 +6,16 @@ module.exports = {
     aliases: [],
     category: "fun",
     usage: "ascii <text>",
-    description: "Returns provided text in ascii format.",
+    description: "Mengembalikan teks yang disediakan dalam format ascii.",
     run: async (client, message, args) => {
 
    let text = args.join(" ");
    if(!text) {
-return message.channel.send(`Please provide text for the ascii conversion!`)
+return message.channel.send(`Harap berikan teks untuk konversi ascii!`)
 }
    let maxlen = 20
 if(text.length > 20) {
-return message.channel.send(`Please put text that has 20 characters or less because the conversion won't be good!`)
+return message.channel.send(`Harap letakkan teks yang memiliki 20 karakter atau kurang karena konversinya tidak akan baik!`)
 }
  // AGAIN, MAKE SURE TO INSTALL FIGLET PACKAGE!  
 figlet(text, function(err, data) {
