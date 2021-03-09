@@ -12,11 +12,11 @@ module.exports = {
     
     const Value = args.join(" ");
 
-    if (!Value || Value.length > 150) return message.channel.send("Please Give Meeting Text And Make Sure Its Not 150+ Characters Long!"); 
+    if (!Value || Value.length > 150) return message.channel.send("Tolong Berikan Teks Pertemuan Dan Pastikan Tidak 150+ Karakter!"); 
 
     const Embed = new Discord.MessageEmbed()
     .setColor(Color)
-    .setTitle("Emergency Meeting (" + message.author.username + ")")
+    .setTitle("Meeting (" + message.author.username + ")")
     .setImage(encodeURI(`https://vacefron.nl/api/emergencymeeting?text=${Value}`))
     .setTimestamp();
 
