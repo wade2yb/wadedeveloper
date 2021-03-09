@@ -11,7 +11,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     const Value = args.join(" ");
-    if (!Value || Value.length > 25) return message.channel.send("Please Give  Text And Make Sure Its Not 25+ Characters Long!"); 
+    if (!Value || Value.length > 25) return message.channel.send("Tolong Beri Teks Dan Pastikan Tidak 25+ Karakter!"); 
 
     const Data = await Random.ChangeMyMind({ Message: Value, Color: Color });
 
