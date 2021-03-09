@@ -11,7 +11,7 @@ module.exports = {
   memberPermissions: ["MANAGE_EMOJIS"],
   async execute(bot, message, args) {
     const emoji = args[0];
-    if (!emoji) return message.channel.send("Please Give Me A Emoji!");
+    if (!emoji) return message.channel.send("Tolong Beri Aku Emoji!");
 
     let customemoji = Discord.Util.parseEmoji(emoji);
 
@@ -37,9 +37,9 @@ module.exports = {
     } else {
       let CheckEmoji = parse(emoji, { assetType: "png" });
       if (!CheckEmoji[0])
-        return message.channel.send("Please Give Me A Valid Emoji!");
+        return message.channel.send("Tolong Beri Saya Emoji yang Valid!");
       message.channel.send(
-        "You Can Use Normal Emoji Without Adding In Server!"
+        "Anda Dapat Menggunakan Emoji Normal Tanpa Menambahkan Di Server!"
       );
     }
   },
