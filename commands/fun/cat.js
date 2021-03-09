@@ -5,7 +5,7 @@ const Discord = require('discord.js')
 module.exports = {
   name: "cat",
   category: "fun",
-description: "Sends a random image of a cat",
+description: "Mengirim gambar kucing secara acak",
 usage: "[command]",
 run: async (client, message, args, level) => {
 //command
@@ -15,7 +15,7 @@ superagent.get('https://nekos.life/api/v2/img/meow')
   .setTitle("Random cat")
   .setImage(response.body.url)
   .setColor(`#000000`)
-  .setFooter(`owo`)
+  .setFooter(`WADE CHAN`)
   .setURL(response.body.url);
 message.channel.send(lewdembed);
 })
