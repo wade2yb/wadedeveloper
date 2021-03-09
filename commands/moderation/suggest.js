@@ -3,17 +3,17 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "suggest",
   usage: "suggest <message>",
-  description: "Send your Suggestion",
+  description: "Kirim Saran Anda",
   category: "moderation",
   run: (client, message, args) => {
     if (!args.length) {
-      return message.channel.send("Please Give the Suggestion");
+      return message.channel.send("Mohon Berikan Sarannya");
     }
 
     let channel = message.guild.channels.cache.find(x => x.name === "keluh-kesah" || x.name === "keluh-kesah");
 
     if (!channel) {
-      return message.channel.send("there is no channel with name - keluh-kesah");
+      return message.channel.send("Tidak ada channel dengan nama - keluh-kesah");
     }
 
     let embed = new MessageEmbed()
@@ -28,7 +28,7 @@ module.exports = {
       m.react("❌");
     });
 
-    message.channel.send("Sent Your Suggestion to " + `${channel}`);
+    message.channel.send("Mengirim Saran Anda ke " + `${channel}`);
     
     message.delete()
     
