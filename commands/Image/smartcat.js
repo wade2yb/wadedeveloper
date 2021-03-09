@@ -10,7 +10,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     const Member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
-    if (!Member) return message.channel.send("Please Mention Or Give ID Of A Member!")
+    if (!Member) return message.channel.send("Mohon Sebutkan Atau Berikan ID Anggota!")
 
     const Embed = new Discord.MessageEmbed()
     .setColor(Color)
