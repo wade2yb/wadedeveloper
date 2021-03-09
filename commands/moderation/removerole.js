@@ -4,16 +4,16 @@ module.exports = {
   name: "removerole",
   aliases: ["rmrole", "-role"],
   category: "moderation",
-  description: "Remove role from any user",
+  description: "Hapus role dari pengguna mana pun",
   run: async (client, message, args) => {
     
     let target = message.mentions.members.first();
     
-    if(!target) return message.reply(`I am unable to find the user`)
+    if(!target) return message.reply(`Saya tidak dapat menemukan pengguna`)
     
     let rrole = message.mentions.roles.first();
     
-    if(!rrole) return message.reply(`I am unable to find the role`)
+    if(!rrole) return message.reply(`Saya tidak dapat menemukan peran tersebut`)
     
     let ticon = target.user.avatarURL({ dynamic: true, size: 2048 });
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
