@@ -5,18 +5,18 @@ const Discord = require("discord.js");
 module.exports = {
   name: "level",
   aliases: ["lvl", "rank"],
-  description: "Get the level of Author or Mentioned",
+  description: "Dapatkan tingkat Penulis atau Disebutkan",
   usage: "level [user]",
   category: "info",
   run: (client, message, args) => {
     const user = message.mentions.users.first() || message.author;
     
     if(user.id === client.user.id) { //IF BOT
-      return message.channel.send("😉 | I am on level 100")
+      return message.channel.send("😉 | Saya berada di level 100")
     }
     
     if(user.bot) {
-      return message.channel.send("Bot do not have levels")
+      return message.channel.send("Bot tidak memiliki level")
     }
     
     let xp = db.get(`xp_${user.id}_${message.guild.id}`) || 0;
