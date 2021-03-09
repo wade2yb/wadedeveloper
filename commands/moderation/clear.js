@@ -2,7 +2,7 @@ module.exports = {
   name: "clear",
   aliases:["c", "purge"],
   category: "moderation",
-  description: "Delete bulk messages with 1 command",
+  description: "Hapus pesan massal dengan 1 perintah",
   run: async (client, message, args) => {
     
             
@@ -26,7 +26,7 @@ module.exports = {
     }
 
     message.channel.bulkDelete(deleteAmount, true)
-    .catch(err => message.reply(`Something went wrong... ${err}`));
+    .catch(err => message.reply(`Ada yang salah... ${err}`));
     
   }
 }
