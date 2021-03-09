@@ -6,11 +6,11 @@ module.exports = {
   aliases: ["ms", "messagesnipe"],
   category: "info",
   usage: "(prefix)snipe",
-  description: "Get last message which is deleted with message Author and Image(If any)",
+  description: "Dapatkan pesan terakhir yang dihapus dengan pesan Penulis dan Gambar (Jika ada)",
   run:async (client, message, args) => {
     
     const msg = client.snipes.get(message.channel.id)
-    if(!msg) return message.channel.send("There's nothing to snipe!")
+    if(!msg) return message.channel.send("Tidak ada yang perlu diklik!")
     const embed = new Discord.MessageEmbed()
     .setAuthor(msg.author)
     .setDescription(msg.content)
