@@ -5,11 +5,11 @@ module.exports = {
   name: "warn",
   category: "moderation",
   usage: "warn <@mention> <reason>",
-  description: "Warn anyone who do not obey the rules",
+  description: "Peringatkan siapa saja yang tidak mematuhi aturan",
   run: async (client, message, args) => {
     if (!message.member.hasPermission("ADMINISTRATOR")) {
       return message.channel.send(
-        "You should have admin perms to use this command!"
+        "Anda harus memiliki izin admin untuk menggunakan perintah ini!"
       );
     }
 
@@ -17,21 +17,21 @@ module.exports = {
 
     if (!user) {
       return message.channel.send(
-        "Please Mention the person to who you want to warn - warn @mention <reaosn>"
+        "Harap Sebutkan orang yang ingin Anda peringatkan - warn @mention <reaosn>"
       );
     }
 
     if (message.mentions.users.first().bot) {
-      return message.channel.send("You can not warn bots");
+      return message.channel.send("Anda tidak dapat memperingatkan bot");
     }
 
     if (message.author.id === user.id) {
-      return message.channel.send("You can not warn yourself");
+      return message.channel.send("Anda tidak bisa memperingatkan diri sendiri");
     }
 
     if (user.id === message.guild.owner.id) {
       return message.channel.send(
-        "You jerk, how you can warn server owner -_-"
+        "LO BEGO !, Gimana lu bisa memperingatkan owner server -_-"
       );
     }
 
@@ -39,7 +39,7 @@ module.exports = {
 
     if (!reason) {
       return message.channel.send(
-        "Please provide reason to warn - warn @mention <reason>"
+        "Harap berikan alasan untuk memperingatkan - warn @mention <reason>"
       );
     }
 
@@ -48,7 +48,7 @@ module.exports = {
     if (warnings === null) {
       db.set(`warnings_${message.guild.id}_${user.id}`, 1);
       user.send(
-        `You have been warned in **${message.guild.name}** for ${reason}`
+        `Anda telah diperingatkan **${message.guild.name}** for ${reason}`
       );
       await message.channel.send(
         `You warned **${
@@ -59,7 +59,7 @@ module.exports = {
       
       db.add(`warnings_${message.guild.id}_${user.id}`, 1);
       
-      user.send(`You have been warned in **${message.guild.name}** for ${reason}`);
+      user.send(`Anda telah diperingatkan **${message.guild.name}** for ${reason}`);
       
       await message.channel.send(`You warned **${message.mentions.users.first().username}** for ${reason}`);
       
