@@ -4,7 +4,7 @@ const random = new Random();
 module.exports = {
   name: "neko",
   category: "fun",
-  description: "Get some neko images",
+  description: "Dapatkan beberapa gambar neko",
   run: async (client, message, args) => {
     
     let data = await random.getNeko()
