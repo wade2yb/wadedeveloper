@@ -6,12 +6,12 @@ name: "announce",
 aliases: ["", "a"],
 category: "moderation",
 usage: "embed <text to say>",
-description: "Returns provided text in Embed form.",
+description: "Mengembalikan teks yang disediakan dalam bentuk Sematkan.",
 run: async(client, message, args) => {
-  if(!message.member.hasPermission("ADMINISTRATION")) return message.channel.send(`YOU DO NOT HAVE PERMISSION `)
+  if(!message.member.hasPermission("ADMINISTRATION")) return message.channel.send(`ANDA TIDAK MEMILIKI IZIN `)
  await message.delete()
   let say = message.content.split(" ").slice(1).join(" ")
-  if(!say) return message.channel.send(`❌ | `+"I Cannot Repeat Blank Message")
+  if(!say) return message.channel.send(`❌ | `+"Saya Tidak Dapat Mengulangi Pesan Kosong")
   let embed = new MessageEmbed()
 .setAuthor(message.author.username, message.author.avatarURL())
   .setDescription(`${say}`)
