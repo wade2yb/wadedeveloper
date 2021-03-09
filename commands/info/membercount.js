@@ -3,14 +3,14 @@ const discord = require("discord.js");
 module.exports = {
   name: "membercount",
   category: "info",
-  description: "Get your id",
+  description: "Dapatkan id Anda",
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
     .setDescription(
     `
 Total Members - ${message.guild.memberCount}
-Humans - ${message.guild.members.cache.filter(m => !m.user.bot).size}
+Manusia - ${message.guild.members.cache.filter(m => !m.user.bot).size}
 Bots - ${message.guild.members.cache.filter(m => m.user.bot).size}`)
     .setColor("RANDOM")
     .setTimestamp(message.timestamp = Date.now())
