@@ -238,7 +238,19 @@ var channel = client.channels.cache.get('812592647876247579');
 
 
 
-client.on("ready", () => {
-    client.user.setActivity(`qhelp |Servers Count - ${client.guilds.cache.size}`, { type: "WATCHING"})
+client.once('ready', () => {
+    client.user.setActivity('WADE CHAN' , { type: "WATCHING" }) // Can Be WATCHING, STREAMING, LISTENING
+    
+    //Below Auto-Changing Status
+    setInterval(() => {
+        const statuses = [
+            `Anak Autis`,
+            `You 😳 `,
+            `KETIK ~HELP`,
+        ]
+
+        const status = statuses[Math.floor(Math.random() * statuses.length)]
+        client.user.setActivity(status, { type: "WATCHING"}) // Can Be WATCHING, STREAMING, LISTENING
+    }, 10000) // Second You Want to Change Status, This Cahnges Every 2 Seconds
 })
 client.login(process.env.TOKEN);
