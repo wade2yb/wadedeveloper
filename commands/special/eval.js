@@ -5,7 +5,7 @@ module.exports = {
     name: 'eval',
     category: 'owner',
     run: async (client, message, args) => {
-        if (message.author.id !== '682981714523586606') return message.channel.send("You do not have permission to use this command!");
+        if (message.author.id !== '682981714523586606') return message.channel.send("Anda tidak memiliki izin untuk menggunakan perintah ini!");
         const embed = new MessageEmbed()
             .setTitle('Evaluating...')
         const msg = await message.channel.send(embed);
