@@ -4,21 +4,21 @@ module.exports = {
   name: "addrole",
   aliases: ["role", "P!role"],
   category: "moderation",
-  description: "Add role to any user",
+  description: "Tambahkan peran ke pengguna mana pun",
   run: async (client, message, args) => {
    if (!message.member.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send("sorry you need permission to mute someone");
+      return message.channel.send("maaf, Anda memerlukan izin untuk menambahkan role");
     }
     if (!message.guild.me.hasPermission("MANAGE_ROLES")) {
-      return message.channel.send("I do not have permission to mute");
+      return message.channel.send("Saya tidak memiliki izin untuk menambahkan role");
     } 
     let target = message.mentions.members.first();
     
-    if(!target) return message.reply(`<:no:677902165859237894>please mention user!`)
+    if(!target) return message.reply(`tolong sebutkan namannya!`)
     
     let arole = message.mentions.roles.first();
     
-    if(!arole) return message.reply(`<:no:677902165859237894>please mention role for add!`)
+    if(!arole) return message.reply(`tolong sebutkan peran untuk menambahkan!`)
     
     let ticon = target.user.avatarURL({ dynamic: true, size: 2048 });
     let aicon = message.author.avatarURL({ dynamic: true, size: 2048 });
@@ -26,7 +26,7 @@ module.exports = {
       const embed = new MessageEmbed()
       
       .setColor("RANDOM")
-      .setDescription(`<a:ok_:731369076315652167>changed role for ${target.user.username} added ${arole}`)
+      .setDescription(`changed role for ${target.user.username} added ${arole}`)
       
       await message.channel.send(embed)
       
