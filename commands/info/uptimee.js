@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports = {
   name: "uptime",
   category: "info",
-  description: "Shows Bot's Uptime.",
+  description: "Menampilkan Waktu Aktif Bot.",
   usage: "uptime",
 
   run: async (client, message, args) => {
