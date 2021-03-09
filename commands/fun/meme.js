@@ -26,7 +26,7 @@ module.exports = {
 
         const json = await res.json();
 
-        if (!json[0]) return message.channel.send(`Your Life Lmfao`);
+        if (!json[0]) return message.channel.send(`Hidup Mu Lmfao;v`);
 
         const data = json[0].data.children[0].data;
 
