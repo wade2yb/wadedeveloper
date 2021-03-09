@@ -14,7 +14,7 @@ const options = {
   
 }
 
-message.channel.send(`<a:Exe_Nitro3:743845033475702794>Fetching Informtion for the Pokemon`).then(msg => {
+message.channel.send(`<a:Exe_Nitro3:743845033475702794>Fetching Informasi untuk Pokemon`).then(msg => {
   get(options).then(body => {
     
     let embed = new MessageEmbed()
@@ -22,7 +22,7 @@ message.channel.send(`<a:Exe_Nitro3:743845033475702794>Fetching Informtion for t
     .setDescription(`Type of this pokemon is **${body.info.type}**. ${body.info.description}`)
     .setThumbnail(`https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/${body.images.photo}`)
     .setColor("RANDOM")
-    .setFooter(`Weakness of pokemon - ${body.info.weakness}`, `https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/${body.images.weaknessIcon}`)
+    .setFooter(`Kelemahan pokemon - ${body.info.weakness}`, `https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/${body.images.weaknessIcon}`)
     
     message.channel.send(embed)
     msg.delete()
