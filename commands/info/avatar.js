@@ -4,7 +4,7 @@ module.exports = {
   name: "avatar",
   aliases: ["av"],
   category: "info",
-  description: "Get dp of any user",
+  description: "Dapatkan dp pengguna mana pun",
   run: async (client, message, args) => {
     
     let target
