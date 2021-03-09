@@ -1,4 +1,23 @@
-// try to found the giveaway with prize then with ID
+const { MessageEmbed } = require('discord.js')
+const ms = require('ms');
+module.exports = {
+        name: "end",
+        description: "Ending giveaway",
+        accessableby: "Administrator",
+        category: "giveaway",
+        aliases: ["giveaway-end"],
+        usage: '<giveawaymessageid>',
+    run: async (bot, message, args) => {
+      if(!message.member.hasPermission('MANAGE_MESSAGES') && !message.member.roles.cache.some((r) => r.name === "Giveaways")){
+        return message.channel.send(':x: Anda harus memiliki izin kelola pesan untuk mengumpulkan ulang hadiah.');
+    }
+
+    // If no message ID or giveaway name is specified
+    if(!args[0]){
+        return message.channel.send(':x: Anda harus menentukan ID pesan yang valid!');
+    }
+
+    // try to found the giveaway with prize then with ID
     let giveaway = 
     // Search with giveaway prize
     bot.giveawaysManager.giveaways.find((g) => g.prize === args.join(' ')) ||
