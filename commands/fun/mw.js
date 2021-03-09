@@ -5,7 +5,7 @@ module.exports = {
   name: "mwallpapers",
   aliases: ["mw", "mobilewallpapers", "mwall"],
   category: "nsfw",
-  description: "Get some wallpapers",
+  description: "Dapatkan beberapa wallpaper",
   run: async (client, message, args) => {
     
     let akanekoSan = new discord.MessageEmbed()
