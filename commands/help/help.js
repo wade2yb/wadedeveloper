@@ -3,7 +3,7 @@ const { MessageEmbed } = require("discord.js");
 module.exports = {
   name: "help",
   description:
-    "Get list of all command and even get to know every command detials",
+    "Dapatkan daftar semua perintah dan bahkan kenali setiap detail perintah!",
   usage: "help <cmd>",
   category: "info",
   run: async (client, message, args) => {
@@ -16,8 +16,8 @@ module.exports = {
 
       let embed = new MessageEmbed()
         .setAuthor(command.name, client.user.displayAvatarURL())
-        .addField("Description", command.description || "Not Provided :(")
-        .addField("Usage", "`" + command.usage + "`" || "Not Provied")
+        .addField("Description", command.description || "Tidak tersedia :(")
+        .addField("Usage", "`" + command.usage + "`" || "Tidak tersedia")
         .setThumbnail(client.user.displayAvatarURL())
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL());
@@ -27,7 +27,7 @@ module.exports = {
       const commands = await client.commands;
 
       let emx = new MessageEmbed()
-        .setDescription("**List Commands Wade Chan** "  )
+        .setDescription("**__List Commands Wade Chan__** "  )
         .setColor("GREEN")
         .setFooter(client.user.username, client.user.displayAvatarURL())
         .setThumbnail(client.user.displayAvatarURL());
