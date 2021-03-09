@@ -1,4 +1,3 @@
-
 const Color = "RANDOM";
 const Discord = require("discord.js");
 
@@ -6,7 +5,7 @@ module.exports = {
   name: "speed",
   aliases: ["iamspeed" ,"ams"],
   category: "Image",
-  description: "Return A Speed Image!",
+  description: "Return Gambar Kecepatan!",
   usage: "Speed | <Mention Or ID>",
   run: async (client, message, args) => {
     
