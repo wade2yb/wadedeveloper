@@ -1,7 +1,7 @@
 const fs = require("fs");
 module.exports = {
   name: "code",
-  description: "Display the code of the specified command.",
+  description: "Tampilkan kode dari perintah yang ditentukan.",
   usage: "<cmd>",
   category: "info",
   args: true,
@@ -26,14 +26,14 @@ module.exports = {
           },
         };
         message.channel.send(
-          `Here is the code for the ${
+          `Ini kode untuk ${
             args[0]
           } command:\n\`\`\`js\n${code.substr(0, 1900)}\`\`\``
         );
       }
     } catch (e) {
       return message.channel.send(
-        "There was an error displaying the command's code."
+        "Terjadi kesalahan saat menampilkan kode perintah."
       );
     }
   },
