@@ -2,7 +2,7 @@ const db = require("quick.db");
 
 module.exports = {
   name: "warnings",
-  description: "Get the warnings of yours or mentioned person",
+  description: "Dapatkan peringatan dari Anda atau orang yang disebutkan",
   category: "moderation",
   run: (client, message, args) => {
     const user = message.mentions.members.first() || message.author;
