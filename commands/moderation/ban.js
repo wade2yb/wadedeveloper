@@ -3,7 +3,7 @@ const discord = require("discord.js");
 module.exports = {
   name: "ban",
   category: "moderation",
-  description: "Ban anyone with one shot whithout knowing anyone xD",
+  description: "Ban siapa pun dengan satu tembakan tanpa mengenal siapa pun xD",
   usage: "ban <@user> <reason>",
   run: async (client, message, args) => {
     
@@ -11,16 +11,16 @@ module.exports = {
     
     const reason = args.slice(1).join(" ")
     
-    if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`You don't have enough powers to ban someone`)
+    if(!message.member.hasPermission("BAN_MEMBERS")) return message.reply(`Anda tidak memiliki cukup power buat ngeban seseorang`)
     
-    if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(`I don't have powers to ban someone`)
+    if(!message.guild.me.hasPermission("BAN_MEMBERS")) return message.reply(`Saya tidak memiliki kekuatan untuk ngeban seseorang`)
     
-    if(!args[0]) return message.reply(`Please mention someone to ban`)
+    if(!args[0]) return message.reply(`Tolong sebutkan seseorang untuk di ban!`)
     
-    if(!target) return message.reply(`I can't find that member`)
+    if(!target) return message.reply(`Saya tidak dapat menemukan anggota itu`)
     
     if(target.roles.highest.position >= message.member.roles.highest.position || message.author.id !== message.guild.owner.id) {
-      return message.reply(`They have more power than you`)
+      return message.reply(`Mereka memiliki power lebih dari Mu!`)
     }
     
     if(target.id === message.author.id) return message.reply(`I can't ban you as you are the Boss`)
@@ -28,7 +28,7 @@ module.exports = {
     if(target.bannable) {
       let embed = new discord.MessageEmbed()
       .setColor("RANDOM")
-      .setDescription(`Banned \`${target}\` for \`${reason || "No Reason Provided"}\``)
+      .setDescription(`Banned \`${target}\` for \`${reason || "Tidak Ada Alasan yang Diberikan"}\``)
       
       message.channel.send(embed)
       
@@ -37,7 +37,7 @@ module.exports = {
       message.delete()
       
     } else {
-      return message.reply(`I can't ban them, make sure that my role is above of theirs`)
+      return message.reply(`Saya tidak bisa ngeban mereka, pastikan peran saya di atas peran mereka`)
     }
     return undefined
   }
