@@ -9,16 +9,16 @@ module.exports = {
     category: "info",
     usage: "Github <Name>",
     exmaple: "Github Emoji",
-    description: `Github User Account Information!`,
+    description: `Informasi Akun Pengguna Github!`,
     run: async (client, message, args) => {
 
        try {
 
-  if (!args[0]) return message.channel.send(`Please Give Me A Username!`)
+  if (!args[0]) return message.channel.send(`Tolong Beri Saya Nama Penggunanya!`)
     
   fetch(`https://api.github.com/users/${args.join('-')}`)
     .then(res => res.json()).then(body => {
-      if(body.message) return message.channel.send(`User Not Found | Please Give Me A Valid Username!`);
+      if(body.message) return message.channel.send(`Pengguna tidak ditemukan | Tolong Beri Saya Nama Pengguna yang Valid!`);
     let { login, avatar_url, name, id, html_url, public_repos, followers, following, location, created_at, bio } = body;
 
             const embed = new MessageEmbed()
@@ -27,11 +27,11 @@ module.exports = {
             .setThumbnail(`${avatar_url}`)
             .addField(`Username`, `${login}`)
             .addField(`ID`, `${id}`)
-            .addField(`Bio`, `${bio || "No Bio"}`)
+            .addField(`Bio`, `${bio || "Tidak ada Bio"}`)
             .addField(`Public Repositories`, `${public_repos || "None"}`, true)
             .addField(`Followers`, `${followers}`, true)
             .addField(`Following`, `${following}`, true)
-            .addField(`Location`, `${location || "No Location"}`)
+            .addField(`Location`, `${location || "Tidak Ada Lokasi"}`)
             .addField(`Account Created`, moment.utc(created_at).format("dddd, MMMM, Do YYYY"))
             .setFooter(`Tysm For Using Me! ${message.author.username}`)
 
@@ -41,7 +41,7 @@ module.exports = {
 
         } catch (error) {
             console.log(`[Commands] [github] Getting Error In github Command :\n`, error);
-            return message.channel.send(`Something Went Wrong Try Again Later!`)
+            return message.channel.send(`Ada yang Salah Coba Lagi Nanti!`)
         }
     }
 };
