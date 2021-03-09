@@ -9,7 +9,7 @@ module.exports = {
   run: async (client, message, args) => {
     
     if(!message.channel.nsfw) {
-      return message.reply("This channel dosen't support nsfw content")
+      return message.reply("Channel ini tidak mendukung konten NSFW")
       
     } else {
     
