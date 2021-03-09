@@ -4,21 +4,21 @@ module.exports = {
   run: async (client, message, args) => {
     if (!message.guild.me.hasPermission(["ADMINISTRATOR"]))
       return message.channel.send(
-        "I Don't Have Proper Permissions To Use This Command!"
+        "Saya Tidak Memiliki Izin Yang Sesuai Untuk Menggunakan Perintah Ini!"
       );
 
     if (!message.mentions.members.first())
       return message.channel.send(
-        `Please Mention User That You Want To Kick From Voice Channel!`
+        `Harap Sebutkan Pengguna Yang Ingin Anda Tendang Dari Channel!`
       );
 
     let { channel } = message.mentions.members.first().voice;
 
     if (!channel)
-      return message.channel.send(`User Is Not In Any Voice Channel!`);
+      return message.channel.send(`Pengguna Tidak Ada Dalam Saluran Suara Apa Pun!`);
 
     message.mentions.members.first().voice.kick();
     
-    message.channel.send(`User Has Been Kicked From Voice Channel!`)
+    message.channel.send(`Pengguna Telah Ditendang Dari Saluran Suara!`)
   }
 };
