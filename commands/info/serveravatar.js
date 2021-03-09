@@ -4,7 +4,7 @@ module.exports = {
   name: "servericon",
   aliases: ["sav", "guildavatar"],
   category: "info",
-  description: "Get avatar of the server",
+  description: "Dapatkan avatar server",
   run: async (client, message, args) => {
     
     let embed = new discord.MessageEmbed()
