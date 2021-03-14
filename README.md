@@ -1,5 +1,5 @@
 # WADE CHAN DISCORD BOT
-[![License](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-green)](https://github.com/wadee2yb/wadeeechannnnnnn.git)
+[![License](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-green)](https://github.com/wadee2yb/wadeeechannnnnnn/blob/Repl.it/LICENSE)
 [![Discord.js Version](https://img.shields.io/badge/discord.js-v12-green)]()
 [![Server POWI](https://img.shields.io/badge/discord-discord.gg%2F3QVwskz-blue)](https://discord.gg/Enyvu8dv38)
 [![Chat](https://img.shields.io/discord/813317684166656030)]()
