@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/LICENSE-CC--BY--SA--4.0-green)](https://github.com/KatowProject/Kato-Bot/blob/master/LICENSE)
 [![Discord.js Version](https://img.shields.io/badge/discord.js-v12-green)]()
 [![Server POWI](https://img.shields.io/badge/discord-discord.gg%2F3QVwskz-blue)](https://discord.gg/Enyvu8dv38)
-[![Chat](https://img.shields.io/discord/336336077755252738)]()
+[![Chat](https://img.shields.io/discord/813317684166656030)]()
 
 <p align="center"><img src="https://images-ext-1.discordapp.net/external/By-Y2gxOEEU7KZzIHzaswlh27eLguGbXlBp-AfF-1u8/https/neko-love.xyz/v1/neko/neko-love_461.jpg?width=676&height=676" /></p>
 
